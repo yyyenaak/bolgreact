@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */ //lint 에러 무시시
+/* eslint-disable no-unused-vars */ //lint 에러 무시
 import { useState } from "react";
 import "./App.css";
 
@@ -49,12 +49,22 @@ function App() {
         <h4>{글제목[2]}</h4>
         <p>2월 17일 발행</p>
       </div>
+
+      <Modal></Modal>
+      <Modal />
+    </div>
+  );
+}
+
+function Modal() {
+  return (
+    <>
       <div className="modal">
         <h4>제목</h4>
         <p>날짜</p>
         <p>상세내용</p>
       </div>
-    </div>
+    </>
   );
 }
 
