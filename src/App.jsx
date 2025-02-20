@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars */ //lint 에러 무시시
 import { useState } from "react";
 import "./App.css";
 
@@ -10,13 +10,25 @@ function App() {
     "파이썬 독학",
   ]); //재랜더링시 useState를 사용
 
+  let [좋아요, 좋아요변경] = useState(0);
+
   return (
     <div className="App">
       <div className="black-nav">
         <h4>Blog-React</h4>
       </div>
       <div className="list">
-        <h4>{글제목[0]}</h4>
+        <h4>
+          {글제목[0]}
+          <span
+            onClick={() => {
+              좋아요변경(1);
+            }}
+          >
+            👍
+          </span>
+          {좋아요}
+        </h4>
         <p>2월 17일 발행</p>
       </div>
       <div className="list">
