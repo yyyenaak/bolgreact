@@ -1,6 +1,14 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+.App {
+  text-align: center;
+}
+
+div {
+  box-sizing: border-box;
+}
+.list {
+  padding-left: 20px;
+  text-align: left;
+  border-bottom: 1px solid gray;
 }
 
 .black-nav {
