@@ -10,7 +10,7 @@ function App() {
     "파이썬 독학",
   ]); //재랜더링시 useState를 사용
 
-  let [좋아요, 좋아요변경] = useState(0);
+  let [좋아요, 좋아요변경] = useState(0); //state 변경함수, 좋아요 변경 넣을때 +1 늘어나게
 
   return (
     <div className="App">
@@ -22,7 +22,7 @@ function App() {
           {글제목[0]}
           <span
             onClick={() => {
-              좋아요변경(1);
+              좋아요변경(좋아요 + 1);
             }}
           >
             👍
