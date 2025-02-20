@@ -49,7 +49,7 @@ function App() {
       <div className="list">
         <h4
           onClick={() => {
-            setModal(!modal);
+            setModal(!modal); //! 은 modal의 현재 행동을 바꿔주는것 "true" -> "false", "false" -> "true"
           }}
         >
           {글제목[2]}
