@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */ //lint 에러 무시
 import { useState } from "react";
 import "./App.css";
@@ -8,10 +9,15 @@ function App() {
     "남자 코드 추천",
     "강남 우동맛집",
     "파이썬 독학",
+    87,
   ]); //재랜더링시 useState를 사용
 
   let [좋아요, 좋아요변경] = useState(0); //state 변경함수, 좋아요 변경 넣을때 +1 늘어나게
   let [modal, setModal] = useState(false);
+
+  [1, 2].map(function (a) {
+    console.log(a);
+  });
 
   return (
     <div className="App">
@@ -56,6 +62,25 @@ function App() {
         </h4>
         <p>2월 17일 발행</p>
       </div>
+
+      {[1, 2].map(function () {
+        return (
+          <div className="list">
+            <h4>
+              {글제목[0]}
+              <span
+                onClick={() => {
+                  좋아요변경(좋아요 + 1);
+                }}
+              >
+                👍
+              </span>
+              {좋아요}
+            </h4>
+            <p>2월 17일 발행</p>
+          </div>
+        );
+      })}
 
       {modal === true ? <Modal></Modal> : null}
     </div>
